@@ -10,7 +10,7 @@ export default class GlobalNavProvider {
         headers: {
           Accept: "application/json;odata=verbose"
         },
-        baseUrl: `${window.location.protocol}//${window.location.hostname}`
+        baseUrl: 'https://itinquisitionllc.sharepoint.com//sites//sales'  //`${window.location.protocol}//${window.location.hostname}`
       }
     });
   }

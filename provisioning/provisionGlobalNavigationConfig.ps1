@@ -2,15 +2,16 @@ $configFile = "config.json";
 
 if((Test-Path $configFile) -eq $false) {
     $siteUrl = Read-Host -Prompt "Enter the site url"
-    $username = Read-Host -Prompt "Enter the username"
-    $securePassword = Read-Host -Prompt "Enter your tenant password" -AsSecureString | ConvertFrom-SecureString
-    @{username=$username;securePassword=$securePassword;siteUrl=$siteUrl} | ConvertTo-Json | Out-File $configFile
+    #$username = Read-Host -Prompt "Enter the username"
+    #$securePassword = Read-Host -Prompt "Enter your tenant password" -AsSecureString | ConvertFrom-SecureString
+    #@{username=$username;securePassword=$securePassword;siteUrl=$siteUrl} | ConvertTo-Json | Out-File $configFile
 }
 
-$configObject = Get-Content $configFile | ConvertFrom-Json
-$password = $configObject.securePassword | ConvertTo-SecureString
-$credentials = new-object -typename System.Management.Automation.PSCredential -argumentlist $configObject.username, $password
-Connect-PnPOnline -url $configObject.siteUrl -Credentials $credentials
+#$configObject = Get-Content $configFile | ConvertFrom-Json
+#$password = $configObject.securePassword | ConvertTo-SecureString
+#$credentials = new-object -typename System.Management.Automation.PSCredential -argumentlist $configObject.username, $password
+#Connect-PnPOnline -url $configObject.siteUrl -spomanagementshell  
+Connect-PnPOnline -url $siteUrl -spomanagementshell 
 
 function ProvisionList() {
     Write-Host ""

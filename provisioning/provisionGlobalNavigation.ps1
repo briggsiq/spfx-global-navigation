@@ -6,7 +6,7 @@ if((Test-Path $configFile) -eq $false) {
 }
 
 $configObject = Get-Content $configFile | ConvertFrom-Json
-Connect-PnPOnline -url $configObject.siteUrl
+Connect-PnPOnline -url $configObject.siteUrl -spomanagementshell  
 function ProvisionList() {
     Write-Host ""
     Write-Host "Provisioning Site Columns, Content Types, & Lists" -ForegroundColor Yellow

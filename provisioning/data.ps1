@@ -1,12 +1,12 @@
-﻿$configFile = "config.json";
+﻿#$configFile = "config.json";
 
-if((Test-Path $configFile) -eq $false) {
-    $siteUrl = Read-Host -Prompt "Enter the site url"
-    @{siteUrl=$siteUrl} | ConvertTo-Json | Out-File $configFile
-}
-
-$configObject = Get-Content $configFile | ConvertFrom-Json
-Connect-PnPOnline -url $configObject.siteUrl
+#if((Test-Path $configFile) -eq $false) {
+ #   
+ #   @{siteUrl=$siteUrl} | ConvertTo-Json | Out-File $configFile
+#}
+$siteUrl = Read-Host -Prompt "Enter the site url"
+#$configObject = Get-Content $configFile | ConvertFrom-Json
+Connect-PnPOnline -url $siteUrl -spomanagementshell
 
 function RemoveAllListItems($listName) {
     Write-Host "Remove All Current List Items from -> $listName" -ForegroundColor Yellow

@@ -4,7 +4,7 @@
   "https": true,
   "serveConfigurations": {
     "default": {
-      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "pageUrl": "https://itinquisitionllc.sharepoint.com/sites/sales/sitepages/home.aspx",
       "customActions": {
         "d70d31d6-43d3-4998-a6d4-7aecc9912c19": {
           "location": "ClientSideExtension.ApplicationCustomizer",
@@ -13,7 +13,7 @@
       }
     },
     "spfxGlobalNavigation": {
-      "pageUrl": "https://contoso.sharepoint.com/sites/mySite/SitePages/myPage.aspx",
+      "pageUrl": "https://itinquisitionllc.sharepoint.com/sites/sales/sitepages/home.aspx",
       "customActions": {
         "d70d31d6-43d3-4998-a6d4-7aecc9912c19": {
           "location": "ClientSideExtension.ApplicationCustomizer",

@@ -1,11 +1,11 @@
 $siteUrl = Read-Host -Prompt "Enter the site url"
 
 #if using MFA or ADFS, replace 'ADFS_SITE_URL.com' with your real domain
-if($siteUrl -like '*ADFS_SITE_URL.com*') {
-    Connect-PnPOnline -url $siteUrl -UseWebLogin
+if($siteUrl -like '*itinquisitionllc*') {
+    Connect-PnPOnline -url $siteUrl -spomanagementshell  
 }
 else {
-    Connect-PnPOnline -url $siteUrl -Credentials (Get-Credential)
+    Connect-PnPOnline -url $siteUrl -spomanagementshell  
 }
 
 function ProvisionLists() {
